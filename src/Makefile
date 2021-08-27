@@ -3,7 +3,7 @@ CC = g++
 CCFLAGS = -g -Wall
 
 prog: main.o
-	$(CC) -I Eigen main.o -Wall -o prog
+	$(CC) main.o matrix.o -Wall -o prog
 
 %.o: %.cpp
 	$(CC) -c $(CCFLAGS) $<
