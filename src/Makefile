@@ -1,9 +1,10 @@
-
 CC = g++
 CCFLAGS = -g -Wall
 
-prog: main.o
-	$(CC) main.o matrix.o -Wall -o prog
+all: prog
+
+prog: main.o matrix.o Nn.o
+	$(CC) main.o matrix.o Nn.o -Wall -o prog
 
 %.o: %.cpp
 	$(CC) -c $(CCFLAGS) $<
